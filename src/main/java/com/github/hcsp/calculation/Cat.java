@@ -20,13 +20,13 @@ public class Cat {
         // 请在此处根据cute/fat/white三个参数
         // 使用位运算对properties进行设值
         if (cute) {
-            properties += CUTE;
+            properties |= CUTE;
         }
         if (fat) {
-            properties += FAT;
+            properties |= FAT;
         }
         if (white) {
-            properties += WHITE;
+            properties |= WHITE;
         }
     }
 
@@ -37,7 +37,7 @@ public class Cat {
      */
     public boolean isCute() {
         // 请在此处使用位运算读取properties，得到猫是否萌的结果
-        return ((properties >> 1 - 1) & 1) == 1;
+        return (properties & CUTE) == CUTE;
     }
 
     /**
@@ -47,7 +47,7 @@ public class Cat {
      */
     public boolean isFat() {
         // 请在此处使用位运算读取properties，得到猫是否胖的结果
-        return ((properties >> 2 - 1) & 1) == 1;
+        return (properties & FAT) == FAT;
     }
 
     /**
@@ -57,7 +57,7 @@ public class Cat {
      */
     public boolean isWhite() {
         // 请在此处使用位运算读取properties，得到猫是否白的结果
-        return ((properties >> 3 - 1) & 1) == 1;
+        return (properties & WHITE) == WHITE;
     }
 
     public static void main(String[] args) {
