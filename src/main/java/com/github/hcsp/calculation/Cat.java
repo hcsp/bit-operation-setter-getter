@@ -18,7 +18,7 @@ public class Cat {
         if (cute){
             properties |= CUTE  ;
         } else if ((CUTE & properties) != 0){
-            properties ^= CUTE;
+            properties ^= CUTE;git
         }
     }
 
