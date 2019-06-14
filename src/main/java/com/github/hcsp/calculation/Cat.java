@@ -18,7 +18,7 @@ public class Cat {
         if (cute){
             properties |= CUTE  ;
         } else if ((CUTE & properties) != 0){
-            properties ^= CUTE;git
+            properties ^= CUTE;
         }
     }
 
@@ -85,3 +85,6 @@ public class Cat {
         System.out.println("这只猫白吗：" + cat.isWhite());
     }
 }
+
+
+gs
