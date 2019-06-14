@@ -85,6 +85,3 @@ public class Cat {
         System.out.println("这只猫白吗：" + cat.isWhite());
     }
 }
-
-
-gs
