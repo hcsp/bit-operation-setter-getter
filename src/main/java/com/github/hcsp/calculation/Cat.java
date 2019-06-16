@@ -18,6 +18,8 @@ public class Cat {
     public void setCute(boolean cute) {
         if (cute) {
             properties |= CUTE;
+        }else{
+            properties=0;
         }
     }
 
