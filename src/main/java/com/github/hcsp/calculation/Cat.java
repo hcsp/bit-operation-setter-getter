@@ -14,48 +14,77 @@ public class Cat {
      *
      * @param cute true为萌，false为不萌
      */
-    public void setCute(boolean cute) {}
-
+    public void setCute(boolean cute) {
+        //设置属性用按位或运算
+        if(cute){
+            properties|=CUTE;//当cute为true时，P的二进制为***1
+        }
+        else{
+            properties&=CUTE;//当cute为false时，P的二进制为***0
+        }
+    }
     /**
      * 这只猫萌吗？请在此处使用位运算读取properties，得到猫是否萌的结果
      *
      * @return 萌则返回true，否则返回false
      */
-    public boolean isCute() {}
+    public boolean isCute() {
+        return ((properties&CUTE)!=0);
+    }
 
     /**
      * 使用位运算设置猫咪胖的属性
      *
      * @param fat true为胖，false为不胖
      */
-    public void setFat(boolean fat) {}
+    public void setFat(boolean fat) {
+        if(fat){
+            properties|=FAT;//当fat为true时,properties的二进制为**1*
+        }
+        else{
+            properties&=(FAT+0X1);//当fat为true时,properties的二进制为**1*
+            //同时不能注意将第一位的属性掩盖,所以需要将第一位进行位运算
+        }
+    }
 
     /**
      * 这只猫胖吗？请在此处使用位运算读取properties，得到猫是否胖的结果
      *
      * @return 胖则返回true，否则返回false
      */
-    public boolean isFat() {}
+    public boolean isFat() {
+        return ((properties&FAT)!=0);
+    }
 
     /**
      * 使用位运算设置猫咪白的属性
      *
      * @param white true为白，false为不白
      */
-    public void setWhite(boolean white) {}
+    public void setWhite(boolean white) {
+        if(white){
+            properties|=WHITE;//当white为true时,properties的二进制为*1**
+        }
+        else{
+            properties&=(WHITE+0X2+0X1);//当white为false时,properties的二进制为*0**
+        //同时保证前两位的属性不被覆盖
+        }
+    }
 
     /**
      * 这只猫白吗？请在此处使用位运算读取properties，得到猫是否白的结果
      *
      * @return 白则返回true，否则返回false
      */
-    public boolean isWhite() {}
+    public boolean isWhite() {
+        return ((properties&=WHITE)!=0);
+    }
 
     public static void main(String[] args) {
         Cat cat = new Cat();
         cat.setCute(true);
         cat.setFat(true);
-        cat.setWhite(false);
+        cat.setWhite(true);
         System.out.println("这只猫萌吗：" + cat.isCute());
         System.out.println("这只猫胖吗：" + cat.isFat());
         System.out.println("这只猫白吗：" + cat.isWhite());
