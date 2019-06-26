@@ -21,7 +21,6 @@ public class Cat {
         } else {
             properties=0;
         }
-        System.out.println(properties);
 
     }
 
@@ -43,7 +42,6 @@ public class Cat {
         if (fat) {
             properties |= FAT;
         }
-        System.out.println(properties);
 
     }
 
@@ -65,8 +63,6 @@ public class Cat {
         if (white) {
             properties |= WHITE;
         }
-        System.out.println(properties);
-
     }
 
     /**
