@@ -15,11 +15,11 @@ public class Cat {
      * @param cute true为萌，false为不萌
      */
     public void setCute(boolean cute) {
-      if(cute){
-        properties |= CUTE;
-      }else{
-          properties &= ~CUTE;
-      }
+        if(cute){
+            properties |= CUTE;
+        }else{
+            properties &= ~CUTE;
+        }
     }
 
     /**
@@ -28,7 +28,7 @@ public class Cat {
      * @return 萌则返回true，否则返回false
      */
     public boolean isCute() {
-      return (properties & CUTE) == CUTE;
+        return (properties & CUTE) == CUTE;
     }
 
     /**
@@ -37,11 +37,11 @@ public class Cat {
      * @param fat true为胖，false为不胖
      */
     public void setFat(boolean fat) {
-      if(fat){
-        properties |= FAT;
-      }else{
-          properties &= ~FAT;
-      }
+        if(fat){
+            properties |= FAT;
+        }else{
+            properties &= ~FAT;
+        }
     }
 
     /**
@@ -50,7 +50,7 @@ public class Cat {
      * @return 胖则返回true，否则返回false
      */
     public boolean isFat() {
-      return (properties & FAT) == FAT;
+        return (properties & FAT) == FAT;
     }
 
     /**
@@ -59,11 +59,11 @@ public class Cat {
      * @param white true为白，false为不白
      */
     public void setWhite(boolean white) {
-      if(white){
-        properties |= WHITE;
-      }else{
-          properties &= ~WHITE;
-      }
+        if(white){
+            properties |= WHITE;
+        }else{
+            properties &= ~WHITE;
+        }
     }
 
     /**
