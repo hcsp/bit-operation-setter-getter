@@ -1,5 +1,6 @@
 package com.github.hcsp.calculation;
 
+import com.sun.media.sound.FFT;
 import com.sun.xml.internal.bind.v2.util.FatalAdapter;
 
 public class Cat {
@@ -18,12 +19,7 @@ public class Cat {
      */
     public void setCute(boolean cute) {
         //如果是cute，则最后一位为1
-        if (cute){
-            properties = properties | CUTE;
-        } else {
-            properties = properties & (~CUTE);//通过左移一位后补0得到最后一位为0
-        }
-
+        properties = cute ? (properties | CUTE) : (properties & (~CUTE));
     }
 
     /**
@@ -41,12 +37,7 @@ public class Cat {
      * @param fat true为胖，false为不胖
      */
     public void setFat(boolean fat) {
-        if(fat){
-            properties = properties | FAT;//倒数第二位是1
-        }else {
-            properties = properties &(~FAT);
-        }
-
+        properties = fat? (properties | FAT) :(properties & (~FAT));
     }
 
     /**
@@ -64,11 +55,7 @@ public class Cat {
      * @param white true为白，false为不白
      */
     public void setWhite(boolean white) {
-        if(white){
-            properties = properties | WHITE;
-        }else {
-            properties = properties & (~WHITE);
-        }
+       properties = white ? (properties | WHITE) : (properties & (~WHITE));
     }
 
     /**
