@@ -1,8 +1,5 @@
 package com.github.hcsp.calculation;
 
-import com.sun.media.sound.FFT;
-import com.sun.xml.internal.bind.v2.util.FatalAdapter;
-
 public class Cat {
     private static int CUTE = 0x1;
     private static int FAT = 0x2;
@@ -18,8 +15,8 @@ public class Cat {
      * @param cute true为萌，false为不萌
      */
     public void setCute(boolean cute) {
-        //如果是cute，则最后一位为1
-        properties = cute ? (properties | CUTE) : (properties & (~CUTE));
+        properties = cute? (properties | CUTE) : (properties &(~CUTE));//true为1 ，false为0
+        
     }
 
     /**
@@ -28,7 +25,7 @@ public class Cat {
      * @return 萌则返回true，否则返回false
      */
     public boolean isCute() {
-       return (properties & CUTE) != 0;
+        return (properties & CUTE) != 0;
     }
 
     /**
@@ -37,7 +34,7 @@ public class Cat {
      * @param fat true为胖，false为不胖
      */
     public void setFat(boolean fat) {
-        properties = fat? (properties | FAT) :(properties & (~FAT));
+        properties = fat? (properties | FAT ) : (properties & (~FAT)) ;
     }
 
     /**
@@ -46,7 +43,7 @@ public class Cat {
      * @return 胖则返回true，否则返回false
      */
     public boolean isFat() {
-        return (properties & FAT) != 0;
+        return (properties & FAT) != 0 ;
     }
 
     /**
@@ -55,7 +52,7 @@ public class Cat {
      * @param white true为白，false为不白
      */
     public void setWhite(boolean white) {
-       properties = white ? (properties | WHITE) : (properties & (~WHITE));
+        properties = white? (properties | WHITE) :(properties & (~WHITE));
     }
 
     /**
