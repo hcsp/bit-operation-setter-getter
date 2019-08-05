@@ -16,7 +16,9 @@ public class Cat {
      */
     public void setCute(boolean cute) {
         if(cute){
-            properties = properties | CUTE;
+            properties |= CUTE;
+        }else{
+            properties &= ~CUTE;
         }
     }
 
@@ -36,7 +38,9 @@ public class Cat {
      */
     public void setFat(boolean fat) {
         if(fat){
-            properties = properties | FAT;
+            properties |= FAT;
+        }else{
+            properties &= ~FAT;
         }
     }
 
@@ -56,7 +60,9 @@ public class Cat {
      */
     public void setWhite(boolean white) {
         if(white){
-            properties = properties | WHITE;
+            properties |= WHITE;
+        }else{
+            properties &= ~WHITE;
         }
     }
 
