@@ -1,9 +1,9 @@
 package com.github.hcsp.calculation;
 
 public class Cat {
-    private static int CUTE = 0x1; // 0001
-    private static int FAT = 0x2;  // 0010
-    private static int WHITE = 0x4;// 0100
+    private static int CUTE = 0x1;
+    private static int FAT = 0x2;
+    private static int WHITE = 0x4;
     private int properties = 0;
 
     // ↑ 请勿修改以上部分的代码，请勿添加新的成员变量
