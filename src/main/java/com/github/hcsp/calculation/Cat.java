@@ -17,6 +17,8 @@ public class Cat {
     public void setCute(boolean cute) {
         if (cute) {
             this.properties = this.properties | CUTE;
+        } else {
+            this.properties = this.properties & (~CUTE);
         }
     }
 
@@ -26,7 +28,7 @@ public class Cat {
      * @return 萌则返回true，否则返回false
      */
     public boolean isCute() {
-        return (this.properties & CUTE) > 0;
+        return (this.properties & CUTE) != 0;
     }
 
     /**
@@ -37,6 +39,8 @@ public class Cat {
     public void setFat(boolean fat) {
         if (fat) {
             this.properties = this.properties | FAT;
+        } else {
+            this.properties = this.properties & (~FAT);
         }
     }
 
@@ -46,7 +50,7 @@ public class Cat {
      * @return 胖则返回true，否则返回false
      */
     public boolean isFat() {
-        return (this.properties & FAT) > 0;
+        return (this.properties & FAT) != 0;
     }
 
     /**
@@ -57,6 +61,8 @@ public class Cat {
     public void setWhite(boolean white) {
         if (white) {
             this.properties = this.properties | WHITE;
+        } else {
+            this.properties = this.properties & (~WHITE);
         }
     }
 
@@ -66,7 +72,7 @@ public class Cat {
      * @return 白则返回true，否则返回false
      */
     public boolean isWhite() {
-        return (this.properties & WHITE) > 0;
+        return (this.properties & WHITE) != 0;
     }
 
     public static void main(String[] args) {
