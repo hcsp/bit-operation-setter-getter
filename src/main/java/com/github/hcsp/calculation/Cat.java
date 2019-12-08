@@ -20,7 +20,7 @@ public class Cat {
         if (cute) {
             properties = properties | CUTE;
         }else {
-            properties &= ~CUTE;
+            properties = properties & (~CUTE);
         }
     }
 
@@ -30,7 +30,7 @@ public class Cat {
      * @return 萌则返回true，否则返回false
      */
     public boolean isCute() {
-        return (properties &= CUTE) != 0;
+        return (properties & CUTE) != 0;
     }
 
 
@@ -54,7 +54,7 @@ public class Cat {
      * @return 胖则返回true，否则返回false
      */
     public boolean isFat() {
-        return (properties & CUTE) != 0;
+        return (properties & FAT) != 0;
     }
 
     /**
