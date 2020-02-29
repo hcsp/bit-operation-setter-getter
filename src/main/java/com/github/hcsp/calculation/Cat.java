@@ -40,7 +40,7 @@ public class Cat {
         if (fat) {
             properties = properties | FAT;
         }else{
-            properties = properties & 0xE;
+            properties = properties & 0xD;
         }
     }
 
@@ -62,7 +62,7 @@ public class Cat {
         if (white) {
             properties = properties | WHITE;
         }else{
-            properties = properties & 0xE;
+            properties = properties & 0xC;
         }
     }
 
