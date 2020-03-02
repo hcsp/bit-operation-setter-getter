@@ -29,7 +29,7 @@ public class Cat {
      * @return 萌则返回true，否则返回false
      */
     public boolean isCute() {
-        return (CUTE&0x1) != 0;
+        return (properties&0x1) != 0;
     }
 
     /**
