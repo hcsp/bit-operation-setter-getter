@@ -20,7 +20,7 @@ public class Cat {
             //properties |= CUTE;
 
         }else{
-            properties &=(~CUTE);
+            properties &=~CUTE;
         }
     }
 
@@ -44,7 +44,7 @@ public class Cat {
             properties = properties | FAT;
             //properties |= FAT;
         }else {
-            properties &=(~FAT);
+            properties &=~FAT;
         }
     }
 
@@ -55,7 +55,7 @@ public class Cat {
      */
     public boolean isFat() {
 
-        return (properties | FAT) != 0;
+        return (properties & FAT) != 0;
     }
 
     /**
@@ -68,7 +68,7 @@ public class Cat {
             properties = properties | WHITE;
 
         }else{
-            properties &=(~WHITE);
+            properties &=~WHITE;
         }
     }
 
@@ -78,7 +78,7 @@ public class Cat {
      * @return 白则返回true，否则返回false
      */
     public boolean isWhite() {
-        return (properties | WHITE) != 0;
+        return (properties & WHITE) != 0;
     }
 
     public static void main(String[] args) {
