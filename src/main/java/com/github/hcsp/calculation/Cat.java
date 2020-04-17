@@ -2,7 +2,7 @@ package com.github.hcsp.calculation;
 
 public class Cat {
     private static int CUTE = 0x1;
-    private static int FAT = 0x2;
+    private static int FAT = 0X2;
     private static int WHITE = 0x4;
     private int properties = 0;
 
@@ -29,7 +29,7 @@ public class Cat {
      * @return 萌则返回true，否则返回false
      */
     public boolean isCute() {
-        return (properties & 1) != 0;
+        return (properties & CUTE) != 0;
 
     }
 
@@ -40,7 +40,7 @@ public class Cat {
      */
     public void setFat(boolean fat) {
         if (fat) {
-            properties |= CUTE;
+            properties |= FAT;
         } else {
             properties &= (~FAT);
 
@@ -64,7 +64,7 @@ public class Cat {
      */
     public void setWhite(boolean white) {
         if (white) {
-            properties |= CUTE;
+            properties |= WHITE;
         } else {
             properties &= (~WHITE);
         }
