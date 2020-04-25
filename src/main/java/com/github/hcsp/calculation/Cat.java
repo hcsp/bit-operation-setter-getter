@@ -62,7 +62,7 @@ public class Cat {
         if (white) {
             properties |= WHITE;
         } else {
-            properties &= WHITE;
+            properties &= (~WHITE);
         }
     }
 
