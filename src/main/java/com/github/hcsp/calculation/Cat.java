@@ -1,5 +1,7 @@
 package com.github.hcsp.calculation;
 
+import java.util.Currency;
+
 public class Cat {
     private static int CUTE = 0x1;
     private static int FAT = 0x2;
@@ -17,6 +19,8 @@ public class Cat {
     public void setCute(boolean cute) {
         if (cute) {
             properties |= CUTE;
+        } else {
+            properties &= ~CUTE;
         }
     }
 
@@ -37,6 +41,8 @@ public class Cat {
     public void setFat(boolean fat) {
         if (fat) {
             properties |= FAT;
+        }else {
+            properties &= ~FAT;
         }
     }
 
@@ -57,6 +63,8 @@ public class Cat {
     public void setWhite(boolean white) {
         if (white) {
             properties |= WHITE;
+        }else {
+            properties &= ~WHITE;
         }
     }
 
