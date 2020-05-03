@@ -1,7 +1,5 @@
 package com.github.hcsp.calculation;
 
-import javafx.beans.binding.When;
-
 public class Cat {
     private static int CUTE = 0x1;
     private static int FAT = 0x2;
