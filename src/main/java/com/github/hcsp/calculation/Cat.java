@@ -1,7 +1,5 @@
 package com.github.hcsp.calculation;
 
-import com.sun.xml.internal.bind.v2.util.FatalAdapter;
-
 public class Cat {
     private static int CUTE = 0x1;
     private static int FAT = 0x2;
