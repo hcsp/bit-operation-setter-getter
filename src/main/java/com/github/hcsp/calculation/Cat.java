@@ -28,7 +28,7 @@ public class Cat {
    * @return 萌则返回true，否则返回false
    */
   public boolean isCute() {
-    return (properties & CUTE) == CUTE;
+    return (properties & CUTE) != 0;
   }
 
   /**
@@ -50,7 +50,7 @@ public class Cat {
    * @return 胖则返回true，否则返回false
    */
   public boolean isFat() {
-    return (properties & FAT) == FAT;
+    return (properties & FAT) != 0;
   }
 
   /**
@@ -72,7 +72,7 @@ public class Cat {
    * @return 白则返回true，否则返回false
    */
   public boolean isWhite() {
-    return (properties & WHITE) == WHITE;
+    return (properties & WHITE) != 0;
   }
 
   public static void main(String[] args) {
