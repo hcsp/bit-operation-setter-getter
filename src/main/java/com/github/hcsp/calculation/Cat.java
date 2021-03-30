@@ -28,7 +28,7 @@ public class Cat {
    * @return 萌则返回true，否则返回false
    */
   public boolean isCute() {
-    return (properties & CUTE) != 0;
+    return (properties & CUTE) == CUTE;
   }
 
   /**
@@ -50,7 +50,7 @@ public class Cat {
    * @return 胖则返回true，否则返回false
    */
   public boolean isFat() {
-    return (properties & FAT) != 0;
+    return (properties & FAT) == FAT;
   }
 
   /**
@@ -72,11 +72,11 @@ public class Cat {
    * @return 白则返回true，否则返回false
    */
   public boolean isWhite() {
-    return (properties & WHITE) != 0;
+    return (properties & WHITE) == WHITE;
   }
 
   public static void main(String[] args) {
-    Cast cat = new Cast();
+    Cat cat = new Cat();
     cat.setCute(true);
     cat.setFat(true);
     cat.setWhite(false);
@@ -85,3 +85,4 @@ public class Cat {
     System.out.println("这只猫白吗：" + cat.isWhite());
   }
 }
+
