@@ -84,8 +84,6 @@ public class Cat {
         if (WHITE == 0) {
             return false;
         } else {
-
-
             return true;
         }
     }
