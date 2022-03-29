@@ -79,7 +79,6 @@ public class Cat {
         if ((WHITE | properties) == 0) {
             return false;
         } else {
-
             return true;
         }
     }
