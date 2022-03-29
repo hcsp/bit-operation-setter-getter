@@ -29,7 +29,7 @@ public class Cat {
      * @return 萌则返回true，否则返回false
      */
     public boolean isCute() {
-        if ((CUTE|properties) == 0) {
+        if ((CUTE | properties) == 0) {
             return false;
         } else {
             return  true;
@@ -55,7 +55,7 @@ public class Cat {
      * @return 胖则返回true，否则返回false
      */
     public boolean isFat() {
-        if ((FAT|properties) == 0) {
+        if ((FAT | properties) == 0) {
             return  false;
         } else {
             return  true;
@@ -81,7 +81,7 @@ public class Cat {
      * @return 白则返回true，否则返回false
      */
     public boolean isWhite() {
-        if ((WHITE|properties) == 0) {
+        if ((WHITE | properties) == 0) {
             return false;
         } else {
             return true;
