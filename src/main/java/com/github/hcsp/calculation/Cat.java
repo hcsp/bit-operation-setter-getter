@@ -15,7 +15,7 @@ public class Cat {
      * @param cute true为萌，false为不萌
      */
     public void setCute(boolean cute) {
-        if(cute == false) {
+        if (cute == false) {
             CUTE = CUTE & 0;
         } else {
             return;
@@ -29,7 +29,7 @@ public class Cat {
      * @return 萌则返回true，否则返回false
      */
     public boolean isCute() {
-        if(this.CUTE == 0) {
+        if (CUTE == 0) {
             return false;
         } else {
             return  true;
@@ -42,7 +42,7 @@ public class Cat {
      * @param fat true为胖，false为不胖
      */
     public void setFat(boolean fat) {
-        if(fat == false) {
+        if (fat == false) {
             FAT = FAT & 0;
         } else {
             return;
@@ -55,7 +55,7 @@ public class Cat {
      * @return 胖则返回true，否则返回false
      */
     public boolean isFat() {
-        if(FAT == 0) {
+        if (FAT == 0) {
             return  false;
         } else {
             return  true;
