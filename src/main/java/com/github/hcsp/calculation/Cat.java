@@ -1,7 +1,7 @@
 package com.github.hcsp.calculation;
 
 public class Cat {
-    private static int CUTE = 0x1;//最后一位代表CUTE与否
+    private static int CUTE = 0x1; //最后一位代表CUTE与否
     private static int FAT = 0x2;
     private static int WHITE = 0x4;
     private int properties = 0;
@@ -15,10 +15,12 @@ public class Cat {
      * @param cute true为萌，false为不萌
      */
     public void setCute(boolean cute) {
-        if (cute) {//当前位一定位1 且不改变其他位
+        if (cute) {
+            //当前位一定位1 且不改变其他位
             properties |= CUTE;
         }
-        else {//考虑到可能先setCute为ture 再set false，用改方法使得当前位一定位0 且不改变其他位
+        else {
+            //考虑到可能先setCute为ture 再set false，用改方法使得当前位一定位0 且不改变其他位
             properties &= ~CUTE;//两种方法
 //            properties &= (properties ^ 0b1);
         }
