@@ -17,7 +17,7 @@ public class Cat {
   public void setCute(boolean cute) {
     // 不改变原先的位
     // 不管怎样 cute都为萌
-    if (cute) {
+    if ( cute ) {
       //其他位都不变,之变cute,并且有1就是1了
       properties |= CUTE;
     } else {
