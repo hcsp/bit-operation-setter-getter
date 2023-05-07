@@ -18,7 +18,7 @@ public class Cat {
         if (cute) {
             properties = properties | CUTE;
         } else {
-            properties &= (~CUTE);
+            properties &= ~CUTE;
         }
     }
 
@@ -40,7 +40,7 @@ public class Cat {
         if (fat) {
             properties = properties | FAT;
         } else {
-            properties &= (~FAT);
+            properties &= ~FAT;
         }
     }
 
@@ -62,7 +62,7 @@ public class Cat {
         if (white) {
             properties = properties | WHITE;
         } else {
-            properties &= (~WHITE);
+            properties &= ~WHITE;
         }
     }
 
